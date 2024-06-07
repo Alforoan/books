@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <main>
+    {% if not books %}
+      <h2>No books found</h2>
+    {% else %}
+      <h1>Books</h1>
+    {% endif %}
+    {% for book in books %}
+   
+    <div>
+      <h2 style='display:inline-block'>{{ book.title }}</h2> - {{ book.author }}
+      <div>
+      <img src='{{ book.cover_image }}' height='200' width=auto/>
+      </div>
+    </div>
+    {% endfor %}
+  </main>
+
+</body>
+</html>
